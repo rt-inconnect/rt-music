@@ -1,0 +1,25 @@
+.header-menu {
+  margin: auto;
+}
+
+.header-menu span {
+  margin-left: 10px;
+}
+
+.header-menu .fa-circle {
+  color: #00fcb1;
+  font-size: 14pt;
+  margin-right: 30px;
+}
+
+.header-menu .fa-caret-down {
+  font-size: 10pt;
+  margin-left: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .header-menu .fa-circle {
+    margin-right: 10px;
+  }
+}

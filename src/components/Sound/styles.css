@@ -1,0 +1,11 @@
+.sound {
+  width: calc(100% / 4 - 15px);
+  margin: 0 15px 15px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .sound {
+    width: calc(100% / 2 - 15px);
+  }
+}

@@ -1,0 +1,42 @@
+.player-menu {
+  margin: auto 10px auto 0;
+  font-size: 16pt;
+}
+
+.player-menu button {
+  border: 0;
+  background: none;
+  color: #fff;
+  margin-left: 5px;
+  cursor: pointer;
+  padding: 5px 7px;
+}
+
+.player-menu button.active {
+  border-bottom: 3px #0aa979 solid;
+}
+
+.player-menu button:focus {
+  outline:0;
+}
+
+.player-menu button:active {
+  background: #464545;
+}
+
+.player-menu .menu-share {
+  background-color: #00fcb1;
+  border-radius: 2px;
+  color: #000;
+  font-size: 12pt;
+}
+
+.player-menu .menu-share:active {
+  background: #0aa979;
+}
+
+@media (max-width: 768px) {
+  .player-menu {
+    font-size: 13pt;
+  }
+}

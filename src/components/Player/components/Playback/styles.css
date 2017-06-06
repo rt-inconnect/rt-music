@@ -1,0 +1,43 @@
+.player-playback {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.player-playback button {
+  border: 0;
+  background: none;
+  color: #fff;
+  border-radius: 50%;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 15pt;
+}
+
+.player-playback button:focus {
+  outline:0;
+}
+
+.player-playback button:active {
+  background: #1f1e1e;
+}
+
+.playback-play, .playback-pause {
+  border: 2px #fff solid!important;
+}
+
+.playback-pause {
+  padding: 13px 16px!important;
+}
+
+.playback-play {
+  padding: 13px 15px 12px 19px!important;
+}
+
+.playback-backward {
+  padding: 13px 17px 12px 13px;
+}
+
+.playback-forward {
+  padding: 13px 14px 12px 17px;
+}

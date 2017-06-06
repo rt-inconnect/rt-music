@@ -1,0 +1,20 @@
+.header-usermenu {
+  margin: auto 10px auto auto!important;
+}
+
+.header-usermenu .fa-caret-down {
+  font-size: 10pt;
+  margin-left: 5px;
+}
+
+.usermenu-notification {
+  position: absolute;
+  top: 2px;
+  margin-left: -4px;
+  background-color: #fd2a1b;
+  border-radius: 50%;
+  font-size: 6pt;
+  font-weight: bold;
+  padding: 5pt 3pt;
+  line-height: 0;
+}

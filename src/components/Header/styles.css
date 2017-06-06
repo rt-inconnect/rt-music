@@ -1,0 +1,20 @@
+.header {
+  padding: 5px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: initial;
+    flex-wrap: wrap;
+  }
+  .header > div {
+    padding: 5px 0;
+    position: relative;
+    margin: 5px;
+  }
+}

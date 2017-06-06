@@ -1,0 +1,10 @@
+.header-logo {
+  margin: auto 5px!important;
+  font-size: 15pt;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.header-logo img {
+  margin-right: 5px;
+}

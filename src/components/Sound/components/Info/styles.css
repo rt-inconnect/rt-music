@@ -1,0 +1,16 @@
+.sound-info {
+  padding: 5px 10px;
+  background: #000;
+  color: #fff;
+}
+
+.sound-info p {
+  margin: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sound-artist {
+  font-size: 14pt;
+}
