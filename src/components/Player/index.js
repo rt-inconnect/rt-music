@@ -11,8 +11,8 @@ class Player extends Component {
     return (
       <div className="player">
         <Gradient />
-        <Playback />
-        <Playing />
+        <Playback {...this.props} />
+        <Playing {...this.props} />
         <Menu />
       </div>
     );

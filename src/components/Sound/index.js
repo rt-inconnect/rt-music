@@ -12,7 +12,7 @@ class Sound extends Component {
     return (
       <div className="sound">
         <Cover sound={sound} />
-        <Playback />
+        <Playback {...this.props} />
         <Info sound={sound} />
       </div>
     );

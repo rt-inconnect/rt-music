@@ -11,11 +11,11 @@ let sounds = [
   { name: 'LTN - Feeling Like Yeah - LTN Sunrise Remix', duration: 361 },
   { name: 'Edamame - didnt I', duration: 215 },
   { name: 'EL B - Buck & Bury feat. Juiceman (Enigma Dubz Remix)', duration: 286 }
-]
+];
 
 function generateSounds() {
 
-  let results = []
+  let results = [];
 
   sounds.forEach((sound, i) => {
     results.push({
@@ -27,16 +27,13 @@ function generateSounds() {
       duration: sound.duration,
       position: 0
     })
-  })
+  });
 
-  return results
+  return results;
 
-}
+};
 
 export default {
-  settings: { volume: 100, mute: false, shuffle: false, repeat: false },
-  styles: { background: '#6f3634,#616563' },
-  playing: generateSounds()[0],
+  playing: { volume: 100, mute: false, shuffle: false, repeat: false, ...generateSounds()[0] },
   sounds: generateSounds()
-
-}
+};

@@ -1,46 +1,32 @@
 import React, { Component } from 'react';
 import './styles.css';
 
-import FontAwesome from 'react-fontawesome';
-
-import Slider from 'react-rangeslider'
-import 'react-rangeslider/lib/index.css'
+import Repeat from './components/Repeat';
+import Shuffle from './components/Shuffle';
+import Position from './components/Position';
+import Duration from './components/Duration';
+import Volume from './components/Volume';
 
 class Playing extends Component {
   render() {
     return (
       <div className="player-playing">
 
-        <button className="playing-repeat">
-          <FontAwesome name="retweet" />
-        </button>
-
-        <button className="playing-shuffle muted">
-          <FontAwesome name="random" />
-        </button>
+        <Repeat {...this.props} />
+        <Shuffle {...this.props} />
 
         <div className="playing-info">
 
-          <div className="info-music">Montana</div>
+          <p className="info-music">{ this.props.playing.name }</p>
 
-          <div className="info-position">
-            <Slider
-              min={0}
-              max={100}
-              tooltip={false}
-              value={30}
-            />
-          </div>
+          <Position {...this.props} />
 
-          <div className="info-artist">Tycho</div>
+          <p className="info-artist">{ this.props.playing.artist }</p>
 
         </div>
 
-        <div className="playing-duration">-2:34</div>
-
-        <button className="playing-volume">
-          <FontAwesome name="volume-up" />
-        </button>
+        <Duration {...this.props} />
+        <Volume {...this.props} />
 
       </div>
     );

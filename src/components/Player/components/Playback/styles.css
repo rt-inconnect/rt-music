@@ -22,18 +22,6 @@
   background: #1f1e1e;
 }
 
-.playback-play, .playback-pause {
-  border: 2px #fff solid!important;
-}
-
-.playback-pause {
-  padding: 13px 16px!important;
-}
-
-.playback-play {
-  padding: 13px 15px 12px 19px!important;
-}
-
 .playback-backward {
   padding: 13px 17px 12px 13px;
 }

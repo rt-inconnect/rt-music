@@ -1,0 +1,16 @@
+.playback-play, .playback-pause, .playback-buffering {
+  border: 2px #fff solid!important;
+  width: 55px;
+}
+
+.playback-pause {
+  padding: 13px 16px!important;
+}
+
+.playback-play {
+  padding: 13px 15px 12px 19px!important;
+}
+
+.playback-buffering {
+  padding: 15px 16px 11px 16px!important;
+}

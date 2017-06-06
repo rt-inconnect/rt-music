@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import './styles.css';
 
-import FontAwesome from 'react-fontawesome';
+import PlaybackButton from '../../../Player/components/Playback/components/PlaybackButton';
 
 class Playback extends Component {
+
   render() {
 
     return (
       <div className="sound-playback">
-        <button className="playback-play">
-          <FontAwesome name="play" />
-        </button>
+        <PlaybackButton {...this.props} />
       </div>
     );
   }

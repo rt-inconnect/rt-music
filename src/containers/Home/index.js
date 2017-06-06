@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import './styles.css';
 
-import initialState from '../../common/initialState.js';
+import { connect } from 'react-redux';
+import { fetchSounds } from '../../components/Sound/action';
+import { bindActionCreators } from 'redux';
 
 import Sound from '../../components/Sound';
 
 class Home extends Component {
 
+  componentWillMount() {
+    //this.props.fetchSounds()
+  }
+
   renderSound = (sound) => {
-    return (<Sound key={ sound.id } sound={ sound } /> )
+    return (<Sound key={ sound.id } sound={ sound } {...this.props} /> )
   }
 
   render() {
-    const { sounds } = initialState;
+    const { sounds } = this.props;
     return (
       <div className="home">
         { sounds.map(this.renderSound) }
@@ -21,4 +27,12 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  sounds: state.sounds
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  fetchSounds
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
