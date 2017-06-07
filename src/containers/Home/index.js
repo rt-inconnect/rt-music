@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './styles.css';
 
 import { connect } from 'react-redux';
-import { fetchSounds } from '../../components/Sound/action';
 import { bindActionCreators } from 'redux';
+import { fetchSounds } from '../../components/Sound/action';
 
 import Sound from '../../components/Sound';
 
@@ -20,7 +20,7 @@ class Home extends Component {
   render() {
     const { sounds } = this.props;
     return (
-      <div className="home">
+      <div className="app-home">
         { sounds.map(this.renderSound) }
       </div>
     );
@@ -28,7 +28,8 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  sounds: state.sounds
+  sounds: state.sounds,
+  playing: state.playing
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

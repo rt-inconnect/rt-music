@@ -1,5 +1,5 @@
 import {
-  CHANGE_PLAYING,
+  SET_PLAYING,
   PAUSE_PLAYING,
   PLAY_PLAYING,
   SEEK_PLAYING,
@@ -16,7 +16,7 @@ export default (state = {}, action) => {
 
   switch (action.type) {
 
-    case CHANGE_PLAYING:
+    case SET_PLAYING:
       return {
         ...state,
         ...action.payload,

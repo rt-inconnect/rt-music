@@ -1,4 +1,4 @@
-export const CHANGE_PLAYING = 'CHANGE_PLAYING';
+export const SET_PLAYING = 'SET_PLAYING';
 
 export const SEEK_PLAYING = 'SEEK_PLAYING';
 

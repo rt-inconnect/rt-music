@@ -35,5 +35,6 @@ function generateSounds() {
 
 export default {
   playing: { volume: 100, mute: false, shuffle: false, repeat: false, ...generateSounds()[0] },
-  sounds: generateSounds()
+  sounds: generateSounds(),
+  playlist: generateSounds()
 };

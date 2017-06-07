@@ -1,5 +1,5 @@
 import {
-  CHANGE_PLAYING,
+  SET_PLAYING,
   SEEK_PLAYING,
   PAUSE_PLAYING,
   PLAY_PLAYING,
@@ -17,15 +17,28 @@ const getRandom = (max) => {
   return Math.floor(Math.random() * (max - 0 + 1)) + 0;
 }
 
+export const playPlaying = () => (dispatch, getState) => {
+  const { playing } = getState();
+
+  //if (!playing || !playing.id) return dispatch({ type: ADD_ERROR, payload: 'No sound to play!' })
+
+  playerProvider.play(playing, playing.volume);
+
+  dispatch({
+    type: PLAY_PLAYING
+  });
+}
+
 export const play = (sound) => (dispatch, getState) => {
   const { playing } = getState();
   if (playing.isPlaying) playerProvider.unloadSound(playing.id);
-  playerProvider.play(sound, playing.volume);
 
   dispatch({
-    type: CHANGE_PLAYING,
+    type: SET_PLAYING,
     payload: sound
   });
+
+  dispatch(playPlaying());
 }
 
 export const pausePlaying = () => (dispatch, getState) => {
@@ -37,18 +50,6 @@ export const pausePlaying = () => (dispatch, getState) => {
 
   dispatch({
     type: PAUSE_PLAYING
-  });
-}
-
-export const playPlaying = () => (dispatch, getState) => {
-  const { playing } = getState();
-
-  //if (!playing || !playing.id) return dispatch({ type: ADD_ERROR, payload: 'No sound to play!' })
-
-  playerProvider.play(playing, playing.volume);
-
-  dispatch({
-    type: PLAY_PLAYING
   });
 }
 

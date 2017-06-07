@@ -1,0 +1,5 @@
+.playlist-sound {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}

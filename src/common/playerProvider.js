@@ -28,7 +28,7 @@ export default {
   /* Returns an SMSound (sound object) instance */
   play(sound, volume) {
     if (!soundManager.getSoundById(prefix + sound.id)) this.createSound(sound.id, sound.url, volume);
-    soundManager.play(prefix + sound.id);
+    return soundManager.play(prefix + sound.id);
   },
 
   /* Returns the given sound object */

@@ -41,6 +41,7 @@
 
 .volume-wrapper:hover .rangeslider__fill {
   background-color: #00fcb1!important;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
 
 .volume-wrapper:hover .rangeslider__handle {

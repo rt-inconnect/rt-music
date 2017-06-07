@@ -3,11 +3,21 @@ import './styles.css';
 
 import FontAwesome from 'react-fontawesome';
 
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import {
+  play,
+  playPlaying,
+  pausePlaying
+} from '../../../../action';
+import { setPlaylist } from '../../../../../Playlist/action';
+
 class PlaybackButton extends Component {
 
   handlePlay = (sound) => {
-    const { play } = this.props;
+    const { sounds, play, setPlaylist } = this.props;
     play(sound);
+    setPlaylist(sounds);
   }
 
   render() {
@@ -44,4 +54,16 @@ class PlaybackButton extends Component {
   }
 }
 
-export default PlaybackButton;
+
+const mapStateToProps = state => ({
+  playing: state.playing
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  play,
+  playPlaying,
+  pausePlaying,
+  setPlaylist
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlaybackButton);

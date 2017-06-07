@@ -19,3 +19,7 @@
 .sound-playback button:active {
   background: #2d2d2d;
 }
+
+.sound-playback .playback-pause, .sound-playback .playback-buffering {
+  background: #00fcb1;
+}

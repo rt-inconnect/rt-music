@@ -7,10 +7,11 @@ class Menu extends Component {
   render() {
     return (
       <div className="header-menu">
-        <FontAwesome name="camera" />
-        <FontAwesome name="circle" />
-        <FontAwesome name="list" />
-        <FontAwesome name="caret-down" />
+
+        <FontAwesome name="home" />
+
+        <FontAwesome name="bars" />
+
       </div>
     );
   }

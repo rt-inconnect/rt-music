@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
+import { Link, IndexLink } from 'react-router';
 
 import FontAwesome from 'react-fontawesome';
 
@@ -8,25 +9,13 @@ class Menu extends Component {
     return (
       <div className="player-menu">
 
-        <button className="menu-spotify active">
-          <FontAwesome name="spotify" />
-        </button>
+        <IndexLink to="/" className="menu-home" title="Go Home" activeClassName="active">
+          <FontAwesome name="home" />
+        </IndexLink>
 
-        <button className="menu-soundcloud">
-          <FontAwesome name="soundcloud" />
-        </button>
-
-        <button className="menu-youtube">
-          <FontAwesome name="youtube" />
-        </button>
-
-        <button className="menu-share">
-          Share
-        </button>
-
-        <button className="menu-more">
-          <FontAwesome name="ellipsis-v" />
-        </button>
+        <Link to="/playlist" className="menu-bars" title="Now Playing Playlist" activeClassName="active">
+          <FontAwesome name="bars" />
+        </Link>
 
       </div>
     );
