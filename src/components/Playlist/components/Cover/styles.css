@@ -1,0 +1,15 @@
+.playlist-cover {
+  margin-top: 65px;
+}
+.playlist-cover img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .playlist-cover {
+    margin-top: 0;
+  }
+}

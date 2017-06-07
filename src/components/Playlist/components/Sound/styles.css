@@ -2,4 +2,40 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  position: relative;
+}
+
+.playlist-sound button {
+  border: 0;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15pt;
+  position: absolute;
+  left: -30px;
+  box-shadow: 0 0 10px 4px rgba(255,255,255,0.5);
+}
+
+.playlist-sound button:focus {
+  outline:0;
+}
+
+.playlist-sound button:active {
+  background: #2d2d2d;
+}
+
+.playlist-sound .playback-pause, .playlist-sound .playback-buffering {
+  background: #00fcb1;
+}
+
+.playlist-sound-info {
+  width: 100%;
+}
+
+.playlist-sound-music {
+  margin: 15px 0;
+  margin-left: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

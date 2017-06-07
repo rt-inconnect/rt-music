@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 
-import config from '../../common/config';
-
+import Cover from './components/Cover';
 import Sound from './components/Sound';
 
 class Playlist extends Component {
@@ -15,13 +14,13 @@ class Playlist extends Component {
   }
 
   render() {
-    const { playlist, playing } = this.props;
+    const { playlist } = this.props;
     return (
       <div className="playlist">
-        <div className="playlist-cover">
-          <img src={config.IMG_CDN + playing.cover} alt={`${playing.artist} - ${playing.name}`} />
+        <div className="playlist-aside">
+          <Cover {...this.props} />
         </div>
-        <div className="playlist-list">
+        <div className="playlist-bside">
           { playlist.map(this.renderSounds) }
         </div>
       </div>

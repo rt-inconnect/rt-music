@@ -10,9 +10,8 @@ class Sound extends Component {
     return (
       <div className="playlist-sound">
         <PlaybackButton {...this.props} />
-        <div className="playlist-info">
-          <p className="playlist-artist" title={sound.artist}>{sound.artist}</p>
-          <p className="playlist-music" title={sound.name}>{sound.name}</p>          
+        <div className="playlist-sound-info">
+          <p className="playlist-sound-music" title={`${sound.artist} - ${sound.name}`}>{`${sound.artist} - ${sound.name}`}</p>
         </div>
       </div>
     );

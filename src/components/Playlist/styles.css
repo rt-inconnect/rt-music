@@ -1,9 +1,31 @@
 .playlist {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  box-shadow: 0px 0px 15px #5d5d5d;
 }
-.playlist-cover img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
+
+.playlist-aside {
+  width: calc(100% - 400px);
+}
+
+.playlist-bside {
+  width: 400px;
+  padding: 50px 10px;
+  background: linear-gradient(to bottom, #fbb092, #eb6582);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .playlist {
+    flex-direction: column;
+  }
+  .playlist-aside {
+    width: 100%;
+  }
+  .playlist-bside {
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+  }
 }
